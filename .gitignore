@@ -1,0 +1,22 @@
+# === Material bruto interno (não vai para o deploy) ===
+Docs/Imagens e Vídeos Originais/
+
+# === Dependências ===
+node_modules/
+
+# === Credenciais e ambiente ===
+.env
+.env.*
+
+# === Configurações pessoais de IDE ===
+.vscode/
+.idea/
+
+# === Temporários e logs ===
+tmp/
+*.log
+
+# === Sistema operacional ===
+Thumbs.db
+Desktop.ini
+.DS_Store
