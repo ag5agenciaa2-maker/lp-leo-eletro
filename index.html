@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leo Eletro — Conserto e Acessórios para Celulares · Bangu, RJ</title>
   <meta name="description" content="Especialistas em iPhone e Android há mais de 20 anos em Bangu. Conserto rápido, com garantia e preço justo. Loja de acessórios e assistência técnica.">
+  <link rel="icon" href="Assets/favicon-leo-eletro.ico" sizes="any">
+  <meta property="og:title" content="Leo Eletro — Conserto e Acessórios para Celulares · Bangu, RJ">
+  <meta property="og:description" content="Especialistas em iPhone e Android há mais de 20 anos em Bangu. Conserto rápido, com garantia e preço justo.">
+  <meta property="og:image" content="Assets/leo-eletro-fachada-loja-bangu.webp">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cookie-banner.css">
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <a class="nav__logo" href="#inicio">
-      <img src="assets/logo.jpg" alt="Leo Eletro">
+      <img src="Assets/logo-desktop-leo-eletro.webp" alt="Leo Eletro — conserto e acessórios para celulares">
     </a>
     <div class="nav__right">
       <div class="nav__links">
@@ -26,16 +32,19 @@
         <a href="#local">Localização</a>
       </div>
       <a class="nav__phone" href="tel:+5521970108814">(21) 97010-8814</a>
-      <a class="btn btn--gold nav__cta" href="https://wa.me/5521970108814" target="_blank" rel="noopener">
+      <a class="btn btn--gold nav__cta" href="https://wa.me/5521970108814?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">
         <span class="ico">✆</span> WhatsApp
       </a>
+      <button class="nav__burger" id="nav-burger" type="button" aria-label="Abrir menu" aria-controls="drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
   <!-- HERO -->
   <header class="hero" id="inicio">
     <div class="hero__bg">
-      <img src="assets/store-interior.png" alt="Interior da loja Leo Eletro">
+      <img src="Assets/leo-eletro-interior-loja-atendimento.webp" alt="Interior da loja Leo Eletro com prateleiras de acessórios e balcão de assistência técnica em Bangu">
       <div class="hero__scrim"></div>
       <div class="hero__glow"></div>
     </div>
@@ -50,7 +59,7 @@
         Conserto rápido, com garantia e preço justo. A assistência técnica de confiança do seu celular — e a loja de acessórios líder em Bangu.
       </p>
       <div class="hero__actions reveal" data-delay="3">
-        <a class="btn btn--gold btn--lg" href="https://wa.me/5521970108814" target="_blank" rel="noopener">
+        <a class="btn btn--gold btn--lg" href="https://wa.me/5521970108814?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">
           <span class="ico">✆</span> Falar no WhatsApp
         </a>
         <a class="btn btn--ghost btn--lg" href="#servicos">Ver serviços →</a>
@@ -78,12 +87,45 @@
   </div>
 
   <!-- DOR & SOLUÇÃO -->
-  <section class="impact">
-    <div class="eyebrow reveal" data-delay="0">Seu problema tem solução</div>
-    <h2 class="impact__title reveal" data-delay="1">
-      Tela quebrada? Bateria viciada?<br>Aparelho travando?
-      <span>A gente resolve <em>rápido</em>, com <em>garantia</em> e <em>preço justo</em>.</span>
-    </h2>
+  <section class="dorsol" id="dor-solucao">
+    <div class="dorsol__inner">
+      <div class="dorsol__head">
+        <div class="eyebrow reveal" data-delay="0">Seu problema tem solução</div>
+        <h2 class="dorsol__title reveal" data-delay="1">Do problema à solução, no mesmo dia.</h2>
+        <p class="dorsol__lead reveal" data-delay="2">Tela quebrada, bateria viciada ou aparelho travando? A gente resolve rápido, com garantia e preço justo.</p>
+      </div>
+
+      <div class="dorsol__grid">
+        <!-- Card Dor -->
+        <article class="dorsol__card dorsol__card--dor reveal" data-delay="0">
+          <img src="Assets/leo-eletro-aparelho-conserto-bancada.webp" alt="Celular com a tela apagada na bancada de conserto da Leo Eletro em Bangu" width="720" height="900" loading="lazy">
+          <h3>O problema</h3>
+          <p>Cada dia com o aparelho parado é um dia sem seu principal companheiro do dia a dia.</p>
+          <ul>
+            <li>Tela trincada ou sem toque</li>
+            <li>Bateria que não segura carga</li>
+            <li>Aparelho travando ou lento</li>
+            <li>Não carrega ou superaquece</li>
+          </ul>
+        </article>
+
+        <!-- Divisor -->
+        <div class="dorsol__divisor reveal" data-delay="1" aria-hidden="true"><span>→</span></div>
+
+        <!-- Card Solução -->
+        <article class="dorsol__card dorsol__card--sol reveal" data-delay="2">
+          <img src="Assets/leo-eletro-iphone-como-novo.webp" alt="iPhone como novo após conserto na Leo Eletro, especialista em Apple e Android em Bangu" width="720" height="820" loading="lazy">
+          <h3>A solução Leo Eletro</h3>
+          <p>Técnicos especializados em Apple e Android resolvem com peças de qualidade e atendimento honesto.</p>
+          <ul>
+            <li>Diagnóstico honesto e sem compromisso</li>
+            <li>Reparo no mesmo dia na maioria dos casos</li>
+            <li>Garantia em todos os serviços</li>
+            <li>Seu aparelho de volta como novo</li>
+          </ul>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- SERVIÇOS -->
@@ -112,8 +154,8 @@
         </div>
       </div>
       <div class="ench__gallery reveal" data-delay="1">
-        <img class="ench__tall" src="assets/storefront.webp" alt="Fachada da loja Leo Eletro">
-        <img src="assets/store-interior.png" alt="Interior da loja Leo Eletro">
+        <img class="ench__tall" src="Assets/leo-eletro-fachada-loja-bangu.webp" alt="Fachada da loja Leo Eletro em Bangu com letreiro e toldo vermelho">
+        <img src="Assets/leo-eletro-interior-loja-atendimento.webp" alt="Interior da loja Leo Eletro com atendentes no balcão">
         <div class="ench__stat">
           <b>100%</b>
           <span>de confiança dos clientes de Bangu</span>
@@ -151,38 +193,49 @@
 
   <!-- DEPOIMENTOS -->
   <section class="section reviews" id="avaliacoes">
-    <div class="reviews__inner">
-      <div class="google-badge reveal" data-delay="0">
-        <span class="google-badge__score">4,9</span>
-        <div>
-          <div class="stars">★★★★★</div>
-          <div class="google-badge__meta">158 avaliações no <b>Google</b></div>
-        </div>
+    <div class="reviews__head reveal" data-delay="0">
+      <div class="eyebrow">O que dizem sobre nós</div>
+      <h2 class="section__title">Quem confia, recomenda</h2>
+      <div class="gbadge">
+        <span class="gbadge__g" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path fill="#EA4335" d="M12 10.2v3.9h5.5c-.24 1.4-.97 2.6-2.06 3.4l3.33 2.6c1.94-1.8 3.06-4.44 3.06-7.6 0-.74-.07-1.45-.2-2.13H12z"/><path fill="#34A853" d="M6.5 14.29l-.75.57-2.66 2.07C4.79 20.02 8.13 22.2 12 22.2c2.7 0 4.96-.89 6.62-2.42l-3.33-2.6c-.9.6-2.05.96-3.29.96-2.53 0-4.68-1.71-5.45-4.01l-.05-.84z"/><path fill="#FBBC05" d="M3.09 6.97A9.96 9.96 0 0 0 2 11.9c0 1.57.37 3.05 1.09 4.36 0 .01 3.41-2.65 3.41-2.65a5.98 5.98 0 0 1-.31-1.87c0-.65.11-1.28.31-1.87L3.09 6.97z"/><path fill="#4285F4" d="M12 5.98c1.47 0 2.78.51 3.82 1.5l2.85-2.85C16.95 2.99 14.7 2 12 2 8.13 2 4.79 4.18 3.09 6.97l3.41 2.65C7.32 7.69 9.47 5.98 12 5.98z"/></svg>
+        </span>
+        <span class="gbadge__score">4,9</span>
+        <span class="gbadge__col">
+          <span class="stars stars--lg">★★★★★</span>
+          <span class="gbadge__meta">Baseado em <b>158 avaliações</b> no Google</span>
+        </span>
       </div>
-      <div class="quote reveal" data-delay="1">
-        <div class="stars stars--lg">★★★★★</div>
-        <blockquote id="review-text">“”</blockquote>
-        <div class="quote__author" id="review-author">
-          <div class="quote__name"></div>
-          <div class="quote__meta"></div>
-        </div>
-      </div>
-      <div class="reviews__nav">
-        <button class="rnav" id="rev-prev" aria-label="Anterior">‹</button>
-        <div class="dots" id="review-dots"></div>
-        <button class="rnav" id="rev-next" aria-label="Próxima">›</button>
-      </div>
-      <a class="section__link reveal" data-delay="2" href="https://search.google.com/local/writereview?placeid=ChIJzQH26DHfmwARFXZUZHCgM_I" target="_blank" rel="noopener">Deixe sua avaliação no Google →</a>
+    </div>
+
+    <div class="reviews__featured reveal" data-delay="1" id="reviews-featured"></div>
+    <div class="reviews__wall reveal" data-delay="2" id="reviews-wall"></div>
+
+    <div class="reviews__cta reveal" data-delay="2">
+      <a class="rev-cta" href="https://search.google.com/local/writereview?placeid=ChIJzQH26DHfmwARFXZUZHCgM_I" target="_blank" rel="noopener">
+        <span class="rev-cta__g" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path fill="#EA4335" d="M12 10.2v3.9h5.5c-.24 1.4-.97 2.6-2.06 3.4l3.33 2.6c1.94-1.8 3.06-4.44 3.06-7.6 0-.74-.07-1.45-.2-2.13H12z"/><path fill="#34A853" d="M6.5 14.29l-.75.57-2.66 2.07C4.79 20.02 8.13 22.2 12 22.2c2.7 0 4.96-.89 6.62-2.42l-3.33-2.6c-.9.6-2.05.96-3.29.96-2.53 0-4.68-1.71-5.45-4.01l-.05-.84z"/><path fill="#FBBC05" d="M3.09 6.97A9.96 9.96 0 0 0 2 11.9c0 1.57.37 3.05 1.09 4.36 0 .01 3.41-2.65 3.41-2.65a5.98 5.98 0 0 1-.31-1.87c0-.65.11-1.28.31-1.87L3.09 6.97z"/><path fill="#4285F4" d="M12 5.98c1.47 0 2.78.51 3.82 1.5l2.85-2.85C16.95 2.99 14.7 2 12 2 8.13 2 4.79 4.18 3.09 6.97l3.41 2.65C7.32 7.69 9.47 5.98 12 5.98z"/></svg>
+        </span>
+        <span class="rev-cta__label">Deixe sua avaliação no Google</span>
+        <svg class="rev-cta__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <span class="reviews__cta-note">Junte-se a <b>158</b> clientes satisfeitos</span>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section faq">
+  <section class="section faq" id="faq">
+    <div class="faq__glow" aria-hidden="true"></div>
     <div class="faq__head reveal" data-delay="0">
       <div class="eyebrow">Dúvidas frequentes</div>
       <h2 class="section__title">Perguntas &amp; respostas</h2>
+      <p class="faq__sub">Tudo o que você precisa saber antes de trazer seu aparelho — do orçamento à garantia.</p>
     </div>
     <div class="faq__list" id="faq-list"></div>
+    <p class="faq__foot reveal" data-delay="0">
+      Não encontrou sua dúvida?
+      <a href="https://wa.me/5521970108814?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20tenho%20uma%20d%C3%BAvida" target="_blank" rel="noopener">Fale com a gente no WhatsApp</a>, respondemos na hora.
+    </p>
   </section>
 
   <!-- LOCALIZAÇÃO -->
@@ -191,90 +244,350 @@
       <div class="eyebrow">Onde estamos</div>
       <h2 class="section__title">Venha nos visitar em Bangu</h2>
     </div>
-    <div class="local__grid">
-      <div class="local__col reveal" data-delay="1">
-        <div class="info-card">
-          <h3>Endereço</h3>
-          <p>Av. Cônego Vasconcelos, 549 — Lj B<br>Bangu, Rio de Janeiro — RJ · 21810-011</p>
-          <a class="btn btn--gold" href="https://www.google.com/maps?daddr=Av.+C%C3%B4nego+Vasconcelos,+549+-+Lj+B+-+Bangu,+Rio+de+Janeiro+-+RJ,+21810-011" target="_blank" rel="noopener">📍 Como chegar</a>
-        </div>
-        <div class="info-card">
-          <h3>Horário</h3>
-          <div class="hours"><span>Seg — Sex</span><b>9h — 19h</b></div>
-          <div class="hours"><span>Sábado</span><b>9h — 17h</b></div>
-          <div class="hours hours--off"><span>Dom / Feriados</span><b>Fechado</b></div>
-        </div>
-        <div class="info-card info-card--row">
-          <a class="chip chip--gold" href="https://wa.me/5521970108814" target="_blank" rel="noopener">✆ WhatsApp</a>
-          <a class="chip" href="https://www.instagram.com/eletro_leo/" target="_blank" rel="noopener">Instagram</a>
+    <div class="local__map-frame reveal" data-delay="1">
+      <iframe class="local__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.0087631143756!2d-43.4645371!3d-22.8805706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdf31e8f601cd%3A0xf233a07064547615!2sLeo%20Eletro%20-%20Conserto%20e%20Venda!5e1!3m2!1spt-BR!2sbr!4v1783453522369!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da Leo Eletro em Bangu" allowfullscreen></iframe>
+    </div>
+    <div class="local__bar reveal" data-delay="2">
+      <div class="local__bar-item">
+        <span class="local__bar-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></span>
+        <div class="local__bar-text">
+          <span class="local__bar-label">Endereço</span>
+          <span class="local__bar-val">Av. Cônego Vasconcelos, 549 — Bangu, RJ</span>
         </div>
       </div>
-      <div class="local__col reveal" data-delay="2">
-        <iframe class="map map--gray" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.0087631143756!2d-43.4645371!3d-22.8805706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdf31e8f601cd%3A0xf233a07064547615!2sLeo%20Eletro%20-%20Conserto%20e%20Venda!5e1!3m2!1spt-BR!2sbr!4v1783453522369!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Leo Eletro"></iframe>
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!4v1783453636366!6m8!1m7!1sWCPFPTaAaEvzpTnxeC_eRw!2m2!1d-22.88049621931918!2d-43.46479550194133!3f102.3569634232145!4f3.42291502591317!5f1.5366184664772655" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tour virtual Leo Eletro"></iframe>
+      <div class="local__bar-item">
+        <span class="local__bar-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3.2 1.9" stroke-linecap="round"/></svg></span>
+        <div class="local__bar-text">
+          <span class="local__bar-label">Horário</span>
+          <span class="local__bar-val">Seg a Sex 9h–19h<br>Sáb 9h–17h</span>
+        </div>
+      </div>
+      <div class="local__bar-item">
+        <span class="local__bar-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.9 6.2 20.95l1.1-6.5-4.7-4.6 6.5-.95z"/></svg></span>
+        <div class="local__bar-text">
+          <span class="local__bar-label">Avaliação</span>
+          <span class="local__bar-val">4,9 · 158+ no Google</span>
+        </div>
+      </div>
+      <div class="local__bar-actions">
+        <a class="btn btn--gold" href="https://www.google.com/maps?daddr=Av.+C%C3%B4nego+Vasconcelos,+549+-+Lj+B+-+Bangu,+Rio+de+Janeiro+-+RJ,+21810-011" target="_blank" rel="noopener noreferrer">Como chegar</a>
+        <a class="btn btn--ghost" href="https://wa.me/5521970108814?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
     </div>
   </section>
 
   <!-- CTA + FORM -->
-  <section class="section cta">
+  <section class="section cta" id="contato">
+    <div class="cta__bg" aria-hidden="true">
+      <img src="Assets/leo-eletro-interior-corredor-loja.webp" alt="" loading="lazy">
+      <div class="cta__scrim"></div>
+    </div>
     <div class="cta__inner">
       <div class="cta__text reveal" data-delay="0">
-        <h2>Fale com a gente. <span class="gold">Resolvemos hoje.</span></h2>
-        <p>Conte o que houve com seu aparelho. Respondemos rápido pelo WhatsApp com orçamento sem compromisso.</p>
-        <a class="cta__phone" href="tel:+5521970108814">(21) 97010-8814</a>
+        <div class="eyebrow">Orçamento sem compromisso</div>
+        <h2>Fale com a gente. <span class="gold-glow">Resolvemos hoje.</span></h2>
+        <p>Conte o que houve com seu aparelho e receba um diagnóstico honesto, com garantia e preço justo. Respondemos rápido — e sem compromisso.</p>
+        <figure class="cta__quote">
+          <div class="cta__quote-stars" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.1l-4.95 2.6.94-5.5-4-3.9 5.53-.8z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.1l-4.95 2.6.94-5.5-4-3.9 5.53-.8z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.1l-4.95 2.6.94-5.5-4-3.9 5.53-.8z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.1l-4.95 2.6.94-5.5-4-3.9 5.53-.8z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.1l-4.95 2.6.94-5.5-4-3.9 5.53-.8z"/></svg>
+          </div>
+          <blockquote>“Sempre conserto meus aparelhos com eles. São super honestos e entregam o serviço rapidamente. Super indico!”</blockquote>
+          <figcaption>Priscilla P. <span>· avaliação no Google</span></figcaption>
+        </figure>
       </div>
       <form class="cta__form reveal" data-delay="1" id="contact-form" novalidate>
+        <div class="cta__form-head">
+          <h3>Solicite seu orçamento</h3>
+          <p>Preencha e envie — a conversa continua no WhatsApp.</p>
+        </div>
         <div class="form-row">
           <label>Nome
             <input type="text" name="nome" placeholder="Seu nome" required>
           </label>
-          <label>Telefone
-            <input type="tel" name="tel" placeholder="(21) 9...." required>
+          <label>Telefone (WhatsApp)
+            <input type="tel" name="tel" id="tel-input" placeholder="(21) 90000-0000" inputmode="numeric" autocomplete="tel" maxlength="16" required>
           </label>
         </div>
-        <label>Aparelho
-          <input type="text" name="aparelho" placeholder="Ex.: iPhone 12, Galaxy S21...">
+        <div class="form-row">
+          <label>E-mail
+            <input type="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+          </label>
+          <label>Serviço
+            <select name="servico" id="servico-select" required>
+              <option value="" disabled selected>Como podemos ajudar?</option>
+              <option>Troca de Tela</option>
+              <option>Troca de Bateria</option>
+              <option>Troca de Câmera</option>
+              <option>Troca de Conector</option>
+              <option>Conserto de iPhone</option>
+              <option>Conserto de Android</option>
+              <option>Compra de aparelho ou acessório</option>
+              <option>Outro assunto</option>
+            </select>
+          </label>
+        </div>
+        <label>Situação
+          <textarea name="msg" rows="3" placeholder="Conte o que aconteceu com seu aparelho (opcional)"></textarea>
         </label>
-        <label>Mensagem
-          <textarea name="msg" rows="3" placeholder="O que aconteceu com o aparelho?"></textarea>
-        </label>
-        <div class="form-error" id="form-error">Preencha nome e telefone para continuar.</div>
-        <button class="btn btn--gold btn--block" type="submit"><span class="ico">✆</span> Enviar pelo WhatsApp</button>
+        <div class="form-error" id="form-error">Preencha nome, e-mail, telefone e o serviço para continuar.</div>
+        <button class="btn btn--gold btn--block btn--lg" type="submit"><svg class="btn__wa" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg> Enviar pelo WhatsApp</button>
+        <p class="cta__form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Enviado direto ao nosso WhatsApp — sem cadastro e sem spam.</p>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer__grid">
-      <div>
-        <img class="footer__logo" src="assets/logo.jpg" alt="Leo Eletro">
-        <p>Conserto e acessórios para celulares. Especialistas em Apple e Android, referência em Bangu há mais de 20 anos.</p>
+    <div class="footer__main">
+      <!-- Coluna 1 — Marca -->
+      <div class="footer__brand">
+        <img class="footer__logo" src="Assets/logo-desktop-leo-eletro.webp" alt="Leo Eletro — conserto e acessórios para celulares">
+        <p class="footer__desc">Conserto e acessórios para celulares. Especialistas em Apple e Android, referência em Bangu há mais de 20 anos.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/eletro_leo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Leo Eletro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig-grad" cx="0.3" cy="1.05" r="1.1"><stop offset="0" stop-color="#FEDA75"/><stop offset="0.25" stop-color="#FA7E1E"/><stop offset="0.5" stop-color="#D62976"/><stop offset="0.75" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></radialGradient></defs><path fill="url(#ig-grad)" d="M12 2c-2.716 0-3.056.012-4.123.06-1.065.049-1.792.218-2.428.465a4.9 4.9 0 0 0-1.771 1.153A4.9 4.9 0 0 0 2.525 5.45c-.247.636-.416 1.363-.465 2.428C2.012 8.944 2 9.284 2 12s.012 3.056.06 4.123c.049 1.064.218 1.791.465 2.427a4.9 4.9 0 0 0 1.153 1.772 4.9 4.9 0 0 0 1.771 1.153c.636.247 1.363.416 2.428.465 1.067.048 1.407.06 4.123.06s3.056-.012 4.123-.06c1.064-.049 1.791-.218 2.427-.465a4.9 4.9 0 0 0 1.772-1.153 4.9 4.9 0 0 0 1.153-1.772c.247-.636.416-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.049-1.065-.218-1.792-.465-2.428a4.9 4.9 0 0 0-1.153-1.771 4.9 4.9 0 0 0-1.772-1.153c-.636-.247-1.363-.416-2.427-.465C15.056 2.012 14.716 2 12 2zm0 1.802c2.67 0 2.986.01 4.04.058.976.045 1.505.207 1.858.344.467.182.8.399 1.15.748.35.35.566.683.748 1.15.137.353.3.882.344 1.857.048 1.055.058 1.37.058 4.041 0 2.67-.01 2.986-.058 4.04-.045.976-.207 1.505-.344 1.858a3.1 3.1 0 0 1-.748 1.15 3.1 3.1 0 0 1-1.15.748c-.353.137-.882.3-1.857.344-1.054.048-1.37.058-4.041.058-2.67 0-2.986-.01-4.04-.058-.976-.045-1.505-.207-1.858-.344a3.1 3.1 0 0 1-1.15-.748 3.1 3.1 0 0 1-.748-1.15c-.137-.353-.3-.882-.344-1.857-.048-1.055-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.045-.976.207-1.505.344-1.858.182-.467.399-.8.748-1.15.35-.35.683-.566 1.15-.748.353-.137.882-.3 1.857-.344 1.055-.048 1.37-.058 4.041-.058zM12 6.865a5.135 5.135 0 1 0 0 10.27 5.135 5.135 0 0 0 0-10.27zm0 8.468a3.333 3.333 0 1 1 0-6.667 3.333 3.333 0 0 1 0 6.667zm6.538-8.671a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/leoeletrocelulareseletronico" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Leo Eletro">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.356c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874V12h3.328l-.532 3.469h-2.796v8.385C19.612 22.954 24 17.99 24 12z"/><path fill="#fff" d="M16.671 15.469 17.203 12h-3.328V9.749c0-.949.465-1.874 1.956-1.874h1.513V4.922s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669V12H7.078v3.469h3.047v8.385a12.13 12.13 0 0 0 3.75 0v-8.385h2.796z"/></svg>
+          </a>
+        </div>
       </div>
-      <div>
+
+      <!-- Coluna 2 — Links Rápidos -->
+      <nav class="footer__col" aria-label="Navegação do rodapé">
+        <h4>Navegação</h4>
+        <ul class="footer__list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#local">Localização</a></li>
+        </ul>
+      </nav>
+
+      <!-- Coluna 3 — Horário -->
+      <div class="footer__col">
+        <h4>Horário</h4>
+        <ul class="footer__list footer__hours">
+          <li><span>Seg. a Sex.</span><b>9h às 19h</b></li>
+          <li><span>Sábado</span><b>9h às 17h</b></li>
+          <li><span>Dom. e feriados</span><b class="footer__hours-off">Fechado</b></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4 — Contato -->
+      <div class="footer__col footer__contact">
         <h4>Contato</h4>
-        <div class="footer__links">
-          <a href="https://share.google/T9KMJImlrcx06bsUb" target="_blank" rel="noopener">🏪 Leo Eletro no Google</a>
-          <a href="https://www.google.com/maps?daddr=Av.+C%C3%B4nego+Vasconcelos,+549+-+Lj+B+-+Bangu,+Rio+de+Janeiro+-+RJ,+21810-011" target="_blank" rel="noopener">📍 Av. Cônego Vasconcelos, 549 — Bangu</a>
-          <a href="https://wa.me/5521970108814" target="_blank" rel="noopener">✆ (21) 97010-8814</a>
-        </div>
-      </div>
-      <div>
-        <h4>Redes &amp; horário</h4>
-        <div class="footer__links">
-          <a href="https://www.instagram.com/eletro_leo/" target="_blank" rel="noopener">Instagram @eletro_leo</a>
-          <a href="https://www.facebook.com/leoeletrocelulareseletronico" target="_blank" rel="noopener">Facebook</a>
-          <span class="footer__muted">Seg–Sex 9h–19h · Sáb 9h–17h<br>Dom/Feriados fechado</span>
-        </div>
+        <ul class="footer__list">
+          <li>
+            <a href="https://share.google/T9KMJImlrcx06bsUb" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+              Leo Eletro
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps?daddr=Av.+C%C3%B4nego+Vasconcelos,+549+-+Lj+B+-+Bangu,+Rio+de+Janeiro+-+RJ,+21810-011" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.13 6.35 11.64 6.62 11.92.2.2.5.31.88.31s.68-.11.88-.31c.27-.28 6.62-6.79 6.62-11.92C19.5 5.36 16.14 2 12 2z"/><circle cx="12" cy="9.4" r="2.75" fill="#fff"/></svg>
+              Av. Cônego Vasconcelos, 549 — Bangu
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5521970108814?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 16 16" fill="#25D366" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+              (21) 97010-8814
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="footer__credits">
-      <span>© Leo Eletro 2026</span>
-      <span>Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5 Agência</a></span>
+
+    <div class="footer__bottom">
+      <div class="footer__credits-left">
+        <span class="footer__copyright">© 2026 Leo Eletro — Conserto e Venda</span>
+        <div class="footer-legal-links">
+          <a href="#" id="ck-prefs-link" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;gap:6px;">
+            <span id="cookie-toggle" style="display:inline-flex;align-items:center;width:28px;height:14px;background:rgba(255,255,255,0.1);border-radius:10px;padding:2px;border:1px solid rgba(255,255,255,0.2);position:relative;font-size:8px;font-weight:bold;">
+              <span style="color:#86EFAC;margin-left:2px;">✓</span>
+              <span style="color:#FCA5A5;margin-left:auto;margin-right:2px;">✕</span>
+              <span id="cookie-toggle-dot" style="position:absolute;left:15px;width:10px;height:10px;background:var(--gold);border-radius:50%;box-shadow:0 0 5px rgba(0,0,0,0.3);transition:left 0.2s ease,background 0.2s ease;"></span>
+            </span>
+            Cookies
+          </a>
+          <span class="footer-legal-links__sep">|</span>
+          <a href="termos-e-condicoes.html">Termos e Condições</a>
+          <span class="footer-legal-links__sep">|</span>
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </div>
+      </div>
+      <div class="footer__credits-right">
+        Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5 Agência</a>
+      </div>
     </div>
   </footer>
 
+  <!-- MOBILE DRAWER (fora do nav para evitar stacking context) -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menu de navegação">
+    <div class="drawer__head">
+      <a class="drawer__logo" href="#inicio">
+        <img src="Assets/logo-desktop-leo-eletro.webp" alt="Leo Eletro — conserto e acessórios para celulares">
+      </a>
+      <button class="drawer__close" id="drawer-close" type="button" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav class="drawer__links">
+      <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#local">Localização</a>
+    </nav>
+    <div class="drawer__foot">
+      <a class="btn btn--gold btn--block" href="https://wa.me/5521970108814?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <span class="ico">✆</span> Falar no WhatsApp
+      </a>
+      <a class="drawer__phone" href="tel:+5521970108814">(21) 97010-8814</a>
+    </div>
+  </aside>
+
   <script src="script.js"></script>
+
+  <!-- ========== COOKIE BANNER (LGPD) ========== -->
+  <div id="ck-banner" class="ck-banner" role="dialog" aria-modal="true" aria-label="Aviso de cookies" aria-live="polite" aria-hidden="true">
+    <div class="ck-banner__inner">
+      <div class="ck-banner__content">
+        <h2 class="ck-banner__title">Valorizamos sua privacidade</h2>
+        <p class="ck-banner__text">
+          Utilizamos cookies para aprimorar sua experiência de navegação, exibir conteúdo
+          personalizado e analisar nosso tráfego. Ao clicar em <strong>"Aceitar todos"</strong>,
+          você concorda com nosso uso de cookies conforme nossa
+          <a href="politica-de-privacidade.html" class="ck-banner__link">Política de Privacidade</a>.
+        </p>
+      </div>
+      <div class="ck-banner__actions">
+        <button id="ck-customize" class="ck-btn ck-btn--ghost">Personalizar</button>
+        <button id="ck-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+        <button id="ck-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="ck-modal" class="ck-modal" role="dialog" aria-modal="true" aria-label="Personalizar preferências de cookies" aria-hidden="true">
+    <div class="ck-modal__overlay" id="ck-modal-overlay"></div>
+    <div class="ck-modal__box">
+      <div class="ck-modal__header">
+        <h2 class="ck-modal__title">Personalizar preferências de consentimento</h2>
+        <button class="ck-modal__close" id="ck-modal-close" aria-label="Fechar modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="ck-modal__body">
+        <p class="ck-modal__intro">
+          Utilizamos cookies para ajudar você a navegar com eficiência e executar certas funções.
+          Os cookies classificados como <strong>"Necessário"</strong> são essenciais para o
+          funcionamento básico do site e não podem ser desativados.
+        </p>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Necessário</h3>
+              <p class="ck-category__desc">Essenciais para o funcionamento do site. Não armazenam dados pessoalmente identificáveis.</p>
+            </div>
+            <span class="ck-category__badge">Sempre ativo</span>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Funcional</h3>
+              <p class="ck-category__desc">Ajudam a executar funcionalidades como compartilhamento em mídia social e recursos de terceiros.</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies funcionais">
+              <input type="checkbox" id="ck-functional" name="functional">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Analítico</h3>
+              <p class="ck-category__desc">Usados para entender como os visitantes interagem com o site (visitantes, taxa de rejeição, etc.).</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies analíticos">
+              <input type="checkbox" id="ck-analytics" name="analytics">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Desempenho</h3>
+              <p class="ck-category__desc">Analisam índices de desempenho do site para oferecer melhor experiência ao visitante.</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies de desempenho">
+              <input type="checkbox" id="ck-performance" name="performance">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="ck-category">
+          <div class="ck-category__header">
+            <div class="ck-category__info">
+              <h3 class="ck-category__name">Publicidade</h3>
+              <p class="ck-category__desc">Entregam anúncios personalizados com base nas páginas visitadas anteriormente.</p>
+            </div>
+            <label class="ck-toggle" aria-label="Ativar cookies de publicidade">
+              <input type="checkbox" id="ck-advertising" name="advertising">
+              <span class="ck-toggle__slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="ck-modal__footer">
+        <button id="ck-modal-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+        <button id="ck-modal-save" class="ck-btn ck-btn--ghost">Salvar Preferências</button>
+        <button id="ck-modal-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="ck-prefs-btn" class="ck-prefs-btn" aria-label="Preferências de cookies" style="display:none;">Cookies</button>
+
+  <!-- WhatsApp Premium (AG5 V2 — botão redondo) -->
+  <div class="wa-premium-container">
+    <div id="wa-message-bubble" class="wa-bubble" aria-hidden="true">
+      <button class="wa-close" id="wa-close-btn" type="button" aria-label="Fechar mensagem">✕</button>
+      <div class="wa-content">
+        <div class="wa-header">
+          <div class="wa-avatar-wrapper">
+            <img src="Assets/favicon-leo-eletro.ico" alt="Leo Eletro" class="wa-avatar" width="45" height="45">
+            <span class="wa-status-dot"></span>
+          </div>
+          <div class="wa-info">
+            <span class="wa-name">Leo Eletro</span>
+            <span class="wa-status-text">Online agora</span>
+          </div>
+        </div>
+        <div id="wa-typing" class="wa-typing"><span></span><span></span><span></span></div>
+        <div id="wa-real-message" class="wa-message-text" style="display:none;">
+          <p>Olá! 👋 Aqui é da <strong>Leo Eletro</strong>. Precisa de conserto ou quer saber sobre um produto? Fala com a gente agora!</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://wa.me/5521970108814?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." class="wa-float-btn" target="_blank" rel="noopener noreferrer" role="button" aria-label="Falar pelo WhatsApp" id="wa-main-btn">
+      <svg viewBox="0 0 16 16" width="32" height="32" fill="currentColor" aria-hidden="true">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="cookie-banner.js" defer></script>
 </body>
 </html>
