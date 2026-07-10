@@ -141,22 +141,28 @@
   </section>
 
   <!-- ENCANTAMENTO -->
-  <section class="ench">
+  <section class="ench" id="ench">
+    <div class="ench__glow" aria-hidden="true"></div>
     <div class="ench__inner">
       <div class="ench__text reveal" data-delay="0">
         <div class="eyebrow">Feito com cuidado</div>
-        <h2>Aplicação de película, troca de peças e diagnóstico — na sua frente.</h2>
+        <h2>Aplicação de película, troca de peças e diagnóstico <span class="gold">na sua frente</span>.</h2>
         <p>Cada aparelho é tratado com atenção. Peças de qualidade, preço justo e um cafezinho enquanto você espera. É por isso que Bangu confia na Leo Eletro há mais de 20 anos.</p>
-        <div class="ench__checks">
-          <span><i>✓</i> Garantia dos serviços</span>
-          <span><i>✓</i> Peças de qualidade</span>
-          <span><i>✓</i> Entrega rápida</span>
-        </div>
+        <ul class="ench__list">
+          <li><span class="ench__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4 4 10-10"/></svg></span>Garantia em todos os serviços</li>
+          <li><span class="ench__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4 4 10-10"/></svg></span>Peças de qualidade e preço justo</li>
+          <li><span class="ench__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4 4 10-10"/></svg></span>Diagnóstico honesto e entrega rápida</li>
+        </ul>
       </div>
-      <div class="ench__gallery reveal" data-delay="1">
-        <img class="ench__tall" src="Assets/leo-eletro-fachada-loja-bangu.webp" alt="Fachada da loja Leo Eletro em Bangu com letreiro e toldo vermelho">
-        <img src="Assets/leo-eletro-interior-loja-atendimento.webp" alt="Interior da loja Leo Eletro com atendentes no balcão">
-        <div class="ench__stat">
+      <div class="ench__media reveal" data-delay="1">
+        <figure class="ench__main">
+          <video src="Assets/leo-eletro-aplicacao-pelicula-nano-gel-iphone.mp4" autoplay muted loop playsinline preload="metadata" poster="Assets/leo-eletro-aparelho-conserto-bancada.webp"></video>
+          <figcaption class="ench__live"><span class="ench__dot"></span>Aplicação de película</figcaption>
+        </figure>
+        <figure class="ench__side">
+          <img src="Assets/leo-eletro-interior-loja-atendimento.webp" alt="Atendimento no balcão da Leo Eletro em Bangu" loading="lazy">
+        </figure>
+        <div class="ench__badge">
           <b>100%</b>
           <span>de confiança dos clientes de Bangu</span>
         </div>
@@ -179,14 +185,14 @@
   <!-- SOBRE / COUNTERS -->
   <section class="section about" id="sobre">
     <div class="about__inner">
+      <figure class="about__media reveal" data-delay="0">
+        <img src="Assets/leo-eletro-fachada-loja-bangu.webp" alt="Fachada da loja Leo Eletro em Bangu, com letreiro, toldo vermelho e bandeira da marca" loading="lazy" width="784" height="1044">
+        <figcaption class="about__media-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>Nossa loja em Bangu · RJ</figcaption>
+      </figure>
+      <div class="about__content">
       <div class="eyebrow reveal" data-delay="0">Sobre a Leo Eletro</div>
-      <h2 class="about__title reveal" data-delay="1">Referência em Bangu há mais de 20 anos, com técnicos especializados em Apple e Android.</h2>
+      <h2 class="about__title reveal" data-delay="1">Referência em Bangu há mais de <span class="gold">20 anos</span>, com técnicos especializados em <span class="gold">Apple e Android</span>.</h2>
       <p class="about__lead reveal" data-delay="2">Do acessório simples à troca de tela e bateria, unimos atendimento personalizado, diplomas e certificações à mostra, e a honestidade que fez da Leo Eletro a loja de confiança do bairro.</p>
-      <div class="counters" id="counters">
-        <div class="counter reveal" data-delay="0"><b data-count="20" data-suffix="" data-prefix="+" data-decimals="0">+0</b><span>Anos de mercado</span></div>
-        <div class="counter reveal" data-delay="1"><b data-count="158" data-decimals="0">0</b><span>Avaliações no Google</span></div>
-        <div class="counter reveal" data-delay="2"><b data-count="4.9" data-decimals="1">0,0</b><span>Nota média ★</span></div>
-        <div class="counter reveal" data-delay="3"><b data-count="10.3" data-decimals="1" data-suffix=" mil">0,0 mil</b><span>Seguidores</span></div>
       </div>
     </div>
   </section>
