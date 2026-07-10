@@ -49,11 +49,34 @@
   (function () {
     var grid = $('#services-grid');
     if (!grid) return;
+    var ICONS = [
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><line x1="10" y1="18.5" x2="14" y2="18.5"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8.5" width="15" height="7" rx="2"/><path d="M20.5 11.5v3"/><path d="M9.6 9.9l-1.7 2.5H11l-1.7 2.5"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a2 2 0 0 1 2-2h1.5l1-1.6A1 1 0 0 1 10.3 5h3.4a1 1 0 0 1 .85.4L15.5 7H18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.2"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4"/><path d="M15 3v4"/><rect x="7" y="7" width="10" height="6" rx="2"/><path d="M12 13v4a3 3 0 0 0 3 3"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.5c0-2 1.62-3 1.7-3.05-.93-1.36-2.37-1.5-2.88-1.52-1.22-.12-2.4.72-3.02.72-.63 0-1.6-.7-2.63-.68-1.35.02-2.6.79-3.3 2-1.4 2.44-.36 6.05 1 8.03.67.97 1.46 2.06 2.5 2.02 1-.04 1.38-.65 2.6-.65 1.2 0 1.55.65 2.62.63 1.08-.02 1.76-.98 2.42-1.96.76-1.1 1.08-2.16 1.1-2.22-.02-.01-2.1-.81-2.1-3.2zM15.1 6.28c.55-.67.92-1.6.82-2.53-.79.03-1.75.53-2.32 1.19-.5.59-.95 1.53-.83 2.44.88.07 1.78-.45 2.33-1.1z"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.4a4 4 0 0 0-5.3 5.1l-4.7 4.7a1.5 1.5 0 0 0 0 2.1l1 1a1.5 1.5 0 0 0 2.1 0l4.7-4.7a4 4 0 0 0 5.1-5.3l-2.5 2.5-2-.6-.6-2z"/></svg>'
+    ];
+    /* Imagens geradas para cada serviço */
+    var IMGS = [
+      'Assets/servico-troca-tela.png',
+      'Assets/servico-troca-bateria.png',
+      'Assets/servico-troca-camera.png',
+      'Assets/servico-troca-conector.png',
+      'Assets/servico-conserto-iphone.png',
+      'Assets/servico-conserto-smartphone.png'
+    ];
     grid.innerHTML = servicos.map(function (s, i) {
-      return '<a class="svc reveal" data-delay="' + (i % 3) + '" href="' + waSobre(s.title) + '" target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre ' + esc(s.title) + '">' +
-        '<div class="svc__num">' + s.num + '</div>' +
+      var imgHtml = IMGS[i]
+        ? '<div class="svc__img-wrap"><img src="' + IMGS[i] + '" alt="' + esc(s.title) + ' — serviço Leo Eletro" loading="lazy"><span class="svc__num" aria-hidden="true">' + s.num + '</span></div>'
+        : '';
+      return '<article class="svc reveal" data-delay="' + (i % 3) + '">' +
+        imgHtml +
+        '<div class="svc__body">' +
+        '<span class="svc__ic" aria-hidden="true">' + (ICONS[i] || '') + '</span>' +
         '<h3>' + esc(s.title) + '</h3>' +
-        '<p>' + esc(s.desc) + '</p></a>';
+        '<p>' + esc(s.desc) + '</p>' +
+        '</div></article>';
     }).join('');
   })();
 
@@ -144,14 +167,14 @@
     grid.innerHTML = CATS.map(function (c, i) {
       return '<button class="vcat reveal" data-delay="' + (i % 4) + '" type="button" data-cat="' + c.key + '">' +
         '<span class="vcat__media"><img src="' + A + c.cover + '" alt="' + esc(c.title) + '" loading="lazy"></span>' +
-        '<span class="vcat__body"><span class="vcat__title">' + esc(c.title) + '</span>' +
-        '<span class="vcat__count">' + c.items.length + ' ' + (c.items.length > 1 ? 'produtos' : 'produto') + '</span></span>' +
-        '<span class="vcat__go" aria-hidden="true">' + arrow + '</span></button>';
+        '<span class="vcat__body"><span class="vcat__count">' + c.items.length + ' ' + (c.items.length > 1 ? 'produtos' : 'produto') + '</span>' +
+        '<span class="vcat__title">' + esc(c.title) + '</span>' +
+        '<span class="vcat__cta">Ver produtos ' + arrow + '</span></span></button>';
     }).join('');
 
     /* Modal */
     var close = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
-    var wa = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.7.8c.2.1.4.2.5.3.1.2.1.6-.1 1.3z"/></svg>';
+    var wa = '<svg class="btn__ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.157 5.335 5.492 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>';
     var modal = document.createElement('div');
     modal.className = 'vmodal';
     modal.setAttribute('aria-hidden', 'true');
@@ -163,7 +186,7 @@
         '<button class="vmodal__close" type="button" data-close aria-label="Fechar">' + close + '</button></div>' +
         '<div class="vmodal__grid" id="vmodal-grid"></div>' +
         '<div class="vmodal__foot"><span class="vmodal__note">Consulte preços e disponibilidade</span>' +
-        '<a class="btn btn--gold" id="vmodal-cta" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a></div>' +
+        '<a class="btn btn--gold" id="vmodal-cta" href="#" target="_blank" rel="noopener">' + wa + 'Falar no WhatsApp</a></div>' +
       '</div>';
     document.body.appendChild(modal);
     var mGrid = $('#vmodal-grid', modal), mTitle = $('#vmodal-title', modal), mCta = $('#vmodal-cta', modal);
@@ -179,7 +202,7 @@
         return '<a class="vitem" href="' + waSobre(name) + '" target="_blank" rel="noopener" aria-label="Consultar ' + esc(name) + ' no WhatsApp">' +
           '<img class="vitem__img" src="' + A + it.f + '" alt="' + esc(name) + '">' +
           '<span class="vitem__overlay"><span class="vitem__name">' + esc(name) + '</span>' +
-          '<span class="vitem__cta">' + wa + 'Consultar</span></span></a>';
+          '<span class="vitem__cta">Consultar ›</span></span></a>';
       }).join('');
       mGrid.scrollTop = 0;
       modal.classList.add('open');
@@ -312,6 +335,28 @@
     function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 40); }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+  })();
+
+  /* ---------- Nav active link (scroll-spy) ---------- */
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var links = document.querySelectorAll('.nav__links a[href^="#"]');
+    if (!links.length) return;
+    var map = {}, sections = [];
+    Array.prototype.forEach.call(links, function (a) {
+      var id = a.getAttribute('href').slice(1);
+      var s = document.getElementById(id);
+      if (s) { map[id] = a; sections.push(s); }
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          Array.prototype.forEach.call(links, function (a) { a.classList.remove('active'); });
+          if (map[e.target.id]) map[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function (s) { io.observe(s); });
   })();
 
   /* ---------- Reveal on scroll ---------- */
