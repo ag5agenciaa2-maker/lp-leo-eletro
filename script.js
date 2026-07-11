@@ -328,6 +328,45 @@
     wall.innerHTML = '<div class="revq"><div class="revq__track">' + cards + cards + '</div></div>';
   })();
 
+  /* ---------- Marquee (loop infinito à prova de largura) ---------- */
+  (function () {
+    var marquee = $('#marquee'), track = $('#marquee-track');
+    if (!marquee || !track) return;
+    var I = {
+      check: '<svg class="mq__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4 4 10-10"/></svg>',
+      bolt: '<svg class="mq__ico" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13z"/></svg>',
+      card: '<svg class="mq__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19"/></svg>',
+      phone: '<svg class="mq__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/></svg>',
+      star: '<svg class="mq__ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2l2.86 6.02 6.64.86-4.9 4.55 1.25 6.57L12 17.9l-5.91 3.3 1.26-6.57-4.9-4.55 6.63-.86z"/></svg>',
+      wrench: '<svg class="mq__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.4a4 4 0 0 0-5.3 5.1l-4.7 4.7a1.5 1.5 0 0 0 0 2.1l1 1a1.5 1.5 0 0 0 2.1 0l4.7-4.7a4 4 0 0 0 5.1-5.3l-2.5 2.5-2-.6-.6-2z"/></svg>'
+    };
+    var ITEMS = [
+      [I.check, 'Garantia por escrito'], [I.bolt, 'Reparo no mesmo dia'], [I.card, 'PIX & Cartão'],
+      [I.phone, 'Apple & Android'], [I.star, '4,9 no Google'], [I.wrench, 'Técnicos especializados']
+    ];
+    function unit() {
+      return ITEMS.map(function (it) {
+        return '<span class="mq__item">' + it[0] + esc(it[1]) + '</span><span class="mq__sep"></span>';
+      }).join('');
+    }
+    function build() {
+      var vw = marquee.clientWidth || document.documentElement.clientWidth || 1280;
+      track.style.animationDuration = '0s';
+      track.innerHTML = '<div class="marquee__group" id="mq-measure">' + unit() + '</div>';
+      var uw = ($('#mq-measure') || {}).getBoundingClientRect ? $('#mq-measure').getBoundingClientRect().width : 0;
+      if (!uw) uw = 1100;
+      var reps = Math.max(2, Math.ceil((vw * 1.35) / uw));
+      var half = '';
+      for (var i = 0; i < reps; i++) half += unit();
+      track.innerHTML = '<div class="marquee__group">' + half + '</div><div class="marquee__group">' + half + '</div>';
+      var halfW = track.firstChild.getBoundingClientRect().width || (uw * reps);
+      track.style.animationDuration = Math.max(18, Math.round(halfW / 70)) + 's';
+    }
+    build();
+    var t;
+    window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(build, 250); }, { passive: true });
+  })();
+
   /* ---------- Nav scroll state ---------- */
   (function () {
     var nav = $('#nav');
