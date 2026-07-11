@@ -1,0 +1,29 @@
+# robots.txt — Leo Eletro
+# Permite indexação por buscadores tradicionais e por motores de IA (GEO)
+
+User-agent: *
+Allow: /
+
+# Motores de busca com IA (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.leoeletro.aghelp.site/sitemap.xml
