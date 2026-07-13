@@ -44,4 +44,4 @@
 📌 **Após preencher cada item:** remover o `[ ]`, substituir/adicionar o campo no Schema (`index.html`) e revalidar em https://validator.schema.org/
 📌 **NAP** deve permanecer idêntico ao Google Business Profile.
 
-> ⚠️ **Observação sobre o domínio:** o Schema usa o site real informado na raiz (`https://www.leoeletro.aghelp.site/`), e não o padrão `[slug].ag5agencia.site`. Se o domínio de produção mudar, atualizar todos os `@id`/`url` do `@graph`, o canonical, OG, `robots.txt` e `sitemap.xml`.
+> ⚠️ **Observação sobre o domínio:** o Schema usa o padrão AG5 `https://www.leoeletro.ag5agencia.site/` (slug `leoeletro`). Se o domínio de produção final for outro (ex.: `leoeletro.aghelp.site`), atualizar todos os `@id`/`url` do `@graph`, o canonical, OG, `robots.txt` e `sitemap.xml`.

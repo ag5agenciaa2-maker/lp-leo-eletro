@@ -1,7 +1,7 @@
 # Relatório de Auditoria SEO/GEO — Leo Eletro
 
 **Data:** 11/07/2026
-**Página auditada:** `index.html` (Landing Page — https://www.leoeletro.aghelp.site/)
+**Página auditada:** `index.html` (Landing Page — https://www.leoeletro.ag5agencia.site/)
 **Skill:** SEO Specialist (SEO + GEO)
 
 ---
@@ -56,7 +56,7 @@ Todas essas lacunas foram corrigidas diretamente no código.
 
 - **Ano de abertura / "+20 anos":** o dossiê aponta divergência (formulário diz 2011; Instagram diz "+20 anos"). Por isso **não** incluí `foundingDate` no Schema, para não afirmar dado incorreto. Se confirmarem o ano, adiciono.
 - **CNPJ:** pendente no dossiê — quando disponível, pode entrar no Schema (`identifier`/`legalName`).
-- **Domínio:** todo o Schema/canonical/OG usa `https://www.leoeletro.aghelp.site/`. **Se o domínio final de produção for outro, é preciso atualizar** essas URLs (canonical, og:url, og:image, JSON-LD, robots.txt e sitemap.xml).
+- **Domínio:** todo o Schema/canonical/OG usa `https://www.leoeletro.ag5agencia.site/`. **Se o domínio final de produção for outro, é preciso atualizar** essas URLs (canonical, og:url, og:image, JSON-LD, robots.txt e sitemap.xml).
 
 ---
 
@@ -65,7 +65,7 @@ Todas essas lacunas foram corrigidas diretamente no código.
 Estas tarefas **não podem ser feitas via código** — são ações externas essenciais para ranquear:
 
 - [ ] **Google Meu Negócio (GMB):** verificar/completar o perfil. Garantir que o **NAP** (Nome, Endereço, Telefone) esteja **idêntico** ao do site: *Leo Eletro · Av. Cônego Vasconcelos, 549 - Lj B, Bangu, RJ, 21810-011 · (21) 97010-8814*.
-- [ ] **Google Search Console:** cadastrar o site, enviar o `sitemap.xml` (`https://www.leoeletro.aghelp.site/sitemap.xml`) e solicitar indexação.
+- [ ] **Google Search Console:** cadastrar o site, enviar o `sitemap.xml` (`https://www.leoeletro.ag5agencia.site/sitemap.xml`) e solicitar indexação.
 - [ ] **Google Analytics / Tag Manager:** instalar o código de acompanhamento (não há tag de analytics no site hoje).
 - [ ] **Confirmar dados pendentes:** ano de abertura e CNPJ (ver seção 3) para enriquecer o Schema.
 - [ ] **Backlinks locais:** cadastrar em diretórios (Apontador, GuiaMais, etc.) e parceiros do bairro, sempre com NAP consistente.

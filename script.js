@@ -543,6 +543,35 @@
     });
   })();
 
+  /* ---------- Vídeo "Feito com cuidado": play/pause premium ---------- */
+  (function () {
+    var video = $('#ench-video');
+    var btn = $('#ench-video-btn');
+    if (!video || !btn) return;
+
+    function sync() {
+      var playing = !video.paused && !video.ended;
+      btn.classList.toggle('is-playing', playing);
+      btn.classList.toggle('is-paused', !playing);
+      btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+      btn.setAttribute('aria-label', playing ? 'Pausar vídeo' : 'Reproduzir vídeo');
+    }
+
+    btn.addEventListener('click', function () {
+      if (video.paused || video.ended) {
+        var p = video.play();
+        if (p && typeof p.catch === 'function') p.catch(function () {});
+      } else {
+        video.pause();
+      }
+    });
+
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
+    video.addEventListener('ended', sync);
+    sync();
+  })();
+
   /* ---------- WhatsApp premium bubble ---------- */
   function initWaBubble() {
     var bubble = $('#wa-message-bubble');

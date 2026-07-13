@@ -26,4 +26,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.leoeletro.aghelp.site/sitemap.xml
+Sitemap: https://www.leoeletro.ag5agencia.site/sitemap.xml
