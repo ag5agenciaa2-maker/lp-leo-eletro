@@ -458,6 +458,16 @@
             <svg class="vplay__ico vplay__ico--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.79-6.86a1 1 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14z"/></svg>
             <svg class="vplay__ico vplay__ico--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6.5" y="5" width="4" height="14" rx="1.5"/><rect x="13.5" y="5" width="4" height="14" rx="1.5"/></svg>
           </button>
+          <div class="vctrls" id="ench-video-ctrls" aria-hidden="true">
+            <button class="vctrl vsound is-muted" id="ench-video-sound" type="button" aria-label="Ativar som" aria-pressed="false">
+              <svg class="vctrl__ico ic-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><line x1="17" y1="9" x2="22" y2="15"/><line x1="22" y1="9" x2="17" y2="15"/></svg>
+              <svg class="vctrl__ico ic-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+            </button>
+            <button class="vctrl vexpand" id="ench-video-expand" type="button" aria-label="Expandir vídeo">
+              <svg class="vctrl__ico ic-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M16 3h3a2 2 0 0 1 2 2v3"/><path d="M21 16v3a2 2 0 0 1-2 2h-3"/><path d="M8 21H5a2 2 0 0 1-2-2v-3"/></svg>
+              <svg class="vctrl__ico ic-compress" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/></svg>
+            </button>
+          </div>
           <figcaption class="ench__live"><span class="ench__dot"></span>Aplicação de película</figcaption>
         </figure>
         <figure class="ench__side">
@@ -481,21 +491,6 @@
       <a class="section__link reveal" data-delay="2" href="https://www.instagram.com/eletro_leo/" target="_blank" rel="noopener">Ver mais no Instagram →</a>
     </div>
     <div class="products__grid" id="products-grid"></div>
-  </section>
-
-  <!-- SOBRE / COUNTERS -->
-  <section class="section about" id="sobre">
-    <div class="about__inner">
-      <figure class="about__media reveal" data-delay="0">
-        <img src="Assets/leo-eletro-fachada-loja-bangu.webp" alt="Fachada da loja Leo Eletro em Bangu, com letreiro, toldo vermelho e bandeira da marca" loading="lazy" width="784" height="1044">
-        <figcaption class="about__media-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>Nossa loja em Bangu · RJ</figcaption>
-      </figure>
-      <div class="about__content">
-      <div class="eyebrow reveal" data-delay="0">Sobre a Leo Eletro</div>
-      <h2 class="about__title reveal" data-delay="1">Referência em Bangu há mais de <span class="gold">20 anos</span>, com técnicos especializados em <span class="gold">Apple e Android</span>.</h2>
-      <p class="about__lead reveal" data-delay="2">Do acessório simples à troca de tela e bateria, unimos atendimento personalizado, diplomas e certificações à mostra, e a honestidade que fez da Leo Eletro a loja de confiança do bairro.</p>
-      </div>
-    </div>
   </section>
 
   <!-- DEPOIMENTOS -->
@@ -527,6 +522,21 @@
         <svg class="rev-cta__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <span class="reviews__cta-note">Junte-se a <b>158</b> clientes satisfeitos</span>
+    </div>
+  </section>
+
+  <!-- SOBRE / COUNTERS -->
+  <section class="section about" id="sobre">
+    <div class="about__inner">
+      <figure class="about__media reveal" data-delay="0">
+        <img src="Assets/leo-eletro-fachada-loja-bangu.webp" alt="Fachada da loja Leo Eletro em Bangu, com letreiro, toldo vermelho e bandeira da marca" loading="lazy" width="784" height="1044">
+        <figcaption class="about__media-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>Nossa loja em Bangu · RJ</figcaption>
+      </figure>
+      <div class="about__content">
+      <div class="eyebrow reveal" data-delay="0">Sobre a Leo Eletro</div>
+      <h2 class="about__title reveal" data-delay="1">Referência em Bangu há mais de <span class="gold">20 anos</span>, com técnicos especializados em <span class="gold">Apple e Android</span>.</h2>
+      <p class="about__lead reveal" data-delay="2">Do acessório simples à troca de tela e bateria, unimos atendimento personalizado, diplomas e certificações à mostra, e a honestidade que fez da Leo Eletro a loja de confiança do bairro.</p>
+      </div>
     </div>
   </section>
 
@@ -878,16 +888,14 @@
         <div class="wa-header">
           <div class="wa-avatar-wrapper">
             <img src="Assets/favicon-leo-eletro.ico" alt="Leo Eletro" class="wa-avatar" width="45" height="45">
-            <span class="wa-status-dot"></span>
           </div>
           <div class="wa-info">
             <span class="wa-name">Leo Eletro</span>
-            <span class="wa-status-text">Online agora</span>
           </div>
         </div>
         <div id="wa-typing" class="wa-typing"><span></span><span></span><span></span></div>
         <div id="wa-real-message" class="wa-message-text" style="display:none;">
-          <p>Olá! 👋 Aqui é da <strong>Leo Eletro</strong>. Precisa de conserto ou quer saber sobre um produto? Fala com a gente agora!</p>
+          <p>Oi, tudo bem? 😊 Aqui é a equipe da <strong>Leo Eletro</strong>. Precisa de um reparo ou tá procurando algum acessório? Chama a gente aqui que a gente te ajuda!</p>
         </div>
       </div>
     </div>

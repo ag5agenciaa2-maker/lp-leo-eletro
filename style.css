@@ -302,7 +302,7 @@ body.drawer-open{overflow:hidden}
 .ench__ic svg{width:16px;height:16px}
 
 /* media mosaic */
-.ench__media{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr 1fr;gap:14px;min-height:440px}
+.ench__media{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1fr .58fr;gap:14px;min-height:351px}
 .ench__main{position:relative;margin:0;grid-row:span 2;border-radius:22px;overflow:hidden;box-shadow:0 50px 100px -50px rgba(0,0,0,1),inset 0 0 0 1px rgba(245,197,24,.18)}
 .ench__main video{width:100%;height:100%;object-fit:cover;display:block}
 .ench__side{position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:0 40px 80px -50px rgba(0,0,0,1),inset 0 0 0 1px rgba(245,245,245,.08)}
@@ -315,6 +315,11 @@ body.drawer-open{overflow:hidden}
 .vplay:hover{transform:translate(-50%,-50%) scale(1.08);box-shadow:0 16px 34px -8px rgba(245,197,24,.85),inset 0 1px 1px rgba(255,255,255,.6),inset 0 0 0 1px rgba(255,255,255,.2)}
 .vplay:active{transform:translate(-50%,-50%) scale(.94)}
 .vplay:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* enquanto toca, o botão só aparece ao passar o mouse sobre o vídeo */
+@media(hover:hover){
+  .ench__main .vplay.is-playing{opacity:0;pointer-events:none}
+  .ench__main:hover .vplay.is-playing{opacity:1;pointer-events:auto}
+}
 .vplay__ring{position:absolute;inset:-5px;border-radius:50%;border:1.5px solid rgba(245,197,24,.55);opacity:0;pointer-events:none}
 .vplay.is-playing .vplay__ring{animation:vplayPulse 2.4s ease-out infinite}
 .vplay__ico{grid-area:1/1;width:24px;height:24px;transition:opacity .28s ease,transform .28s cubic-bezier(.22,1,.36,1);filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
@@ -324,6 +329,56 @@ body.drawer-open{overflow:hidden}
 .vplay.is-paused .vplay__ico--pause{opacity:0;transform:scale(.6)}
 @keyframes vplayPulse{0%{opacity:.7;transform:scale(1)}70%{opacity:0;transform:scale(1.35)}100%{opacity:0;transform:scale(1.35)}}
 @media(prefers-reduced-motion:reduce){.vplay.is-playing .vplay__ring{animation:none}}
+/* secondary controls: sound + expand (appear while playing) */
+.vctrls{position:absolute;right:14px;top:14px;display:flex;gap:8px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .4s ease,transform .45s cubic-bezier(.22,1,.36,1);z-index:4}
+.vctrls.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.vctrl{width:40px;height:40px;display:grid;place-items:center;padding:0;border:1px solid rgba(245,197,24,.32);cursor:pointer;border-radius:50%;color:#fff;background:rgba(10,10,10,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 24px -12px rgba(0,0,0,.95),inset 0 1px 1px rgba(255,255,255,.1);-webkit-tap-highlight-color:transparent;transition:transform .3s cubic-bezier(.22,1,.36,1),background .3s ease,border-color .3s ease,color .3s ease}
+.vctrl:hover{transform:scale(1.1);background:rgba(22,22,22,.72);border-color:rgba(245,197,24,.7);color:var(--gold)}
+.vctrl:active{transform:scale(.92)}
+.vctrl:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.vctrl__ico{grid-area:1/1;width:19px;height:19px}
+.vsound .ic-sound{display:none}
+.vsound.is-on .ic-sound{display:block}
+.vsound.is-on .ic-mute{display:none}
+.vexpand .ic-compress{display:none}
+.vexpand.is-full .ic-expand{display:none}
+.vexpand.is-full .ic-compress{display:block}
+/* ===== Lightbox premium do vídeo ===== */
+.vlightbox{position:fixed;inset:0;z-index:130;display:flex;align-items:center;justify-content:center;padding:clamp(20px,5vw,56px);opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease}
+.vlightbox.open{opacity:1;visibility:visible}
+.vlightbox__backdrop{position:absolute;inset:0;background:radial-gradient(120% 120% at 50% 0%,rgba(30,22,4,.55),rgba(6,6,6,.9) 70%);backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%)}
+.vlightbox__panel{position:relative;width:auto;max-width:100%;transform:scale(.93) translateY(14px);opacity:0;transition:transform .55s cubic-bezier(.22,1,.36,1),opacity .45s ease}
+.vlightbox.open .vlightbox__panel{transform:none;opacity:1}
+.vlightbox__stage{position:relative;border-radius:26px;overflow:hidden;background:#000;aspect-ratio:9/16;height:min(86vh,880px);max-width:100%;margin:0 auto;box-shadow:0 70px 130px -40px rgba(0,0,0,.95),0 0 0 1px rgba(245,197,24,.24),0 0 60px -12px rgba(245,197,24,.28),inset 0 0 0 1px rgba(255,255,255,.05)}
+.vlightbox__stage video{width:100%;height:100%;object-fit:contain;display:block;background:#000;cursor:pointer}
+.vlightbox__close{position:absolute;top:14px;right:14px;z-index:3;width:44px;height:44px;display:grid;place-items:center;padding:0;border:1px solid rgba(245,197,24,.32);cursor:pointer;border-radius:50%;color:#fff;background:rgba(10,10,10,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 24px -12px rgba(0,0,0,.95),inset 0 1px 1px rgba(255,255,255,.1);-webkit-tap-highlight-color:transparent;transition:transform .3s cubic-bezier(.22,1,.36,1),background .3s ease,border-color .3s ease,color .3s ease}
+.vlightbox__close:hover{transform:scale(1.1);background:rgba(22,22,22,.72);border-color:rgba(245,197,24,.7);color:var(--gold)}
+.vlightbox__close:active{transform:scale(.92)}
+.vlightbox__close:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.vlightbox__close svg{width:20px;height:20px;transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.vlightbox__close:hover svg{transform:rotate(90deg)}
+/* barra de controles do lightbox */
+.vlb-bar{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:center;gap:12px;padding:26px 16px 14px;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.42) 55%,rgba(0,0,0,0) 100%);opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease;color:#fff}
+.vlightbox__stage:hover .vlb-bar,.vlb-bar:focus-within,.vlb-bar.is-shown{opacity:1;transform:translateY(0)}
+.vlb-btn{flex:0 0 auto;width:38px;height:38px;display:grid;place-items:center;padding:0;border:none;background:transparent;color:#fff;cursor:pointer;border-radius:50%;-webkit-tap-highlight-color:transparent;transition:color .25s ease,background .25s ease,transform .25s ease}
+.vlb-btn:hover{color:var(--gold);background:rgba(255,255,255,.08)}
+.vlb-btn:active{transform:scale(.9)}
+.vlb-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.vlb-btn svg{grid-area:1/1;width:20px;height:20px}
+.vlb-play .ic-pause,.vlb-mute .ic-muted{display:none}
+.vlb-play.is-playing .ic-play{display:none}
+.vlb-play.is-playing .ic-pause{display:block}
+.vlb-mute.is-muted .ic-sound{display:none}
+.vlb-mute.is-muted .ic-muted{display:block}
+.vlb-time{flex:0 0 auto;font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.02em;color:rgba(255,255,255,.9);white-space:nowrap}
+.vlb-time i{color:rgba(255,255,255,.5);font-style:normal;margin:0 3px}
+.vlb-seek{position:relative;flex:1 1 auto;height:34px;display:flex;align-items:center;cursor:pointer}
+.vlb-seek__track{position:relative;width:100%;height:5px;border-radius:999px;background:rgba(255,255,255,.22);overflow:hidden}
+.vlb-seek__fill{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,#ffe9a6,var(--gold));border-radius:999px}
+.vlb-seek__input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.vlb-seek:hover .vlb-seek__track{height:7px}
+.vlb-seek__track{transition:height .2s ease}
+@media(prefers-reduced-motion:reduce){.vlightbox,.vlightbox__panel{transition:opacity .2s ease,visibility .2s ease}.vlightbox__close:hover{transform:scale(1.08)}}
 .ench__badge{border-radius:20px;padding:22px 24px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(150deg,rgba(245,197,24,.12),rgba(20,20,20,.55) 62%);border:1px solid rgba(245,197,24,.22);box-shadow:0 30px 60px -38px rgba(245,197,24,.4)}
 .ench__badge b{font-family:var(--font-title);font-size:clamp(30px,4vw,42px);font-weight:700;color:var(--gold);line-height:1;text-shadow:0 0 26px rgba(245,197,24,.35)}
 .ench__badge span{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.4}
