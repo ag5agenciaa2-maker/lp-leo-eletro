@@ -92,15 +92,15 @@
       'caixa-som-altomex-al8901-portatil.webp','caixa-som-banson-711-21.webp','caixa-som-boa-tech-mini.webp','caixa-som-jc-312-bluetooth.webp','caixa-som-ms1664bt-bluetooth-fm.webp','caixa-som-sxqf019-boombox.webp','mini-caixa-som-inova-rad8623.webp','lampada-caixa-som-music-bulb.webp',
       'carregador-apple-20w-usbc-lightning.webp','carregador-apple-usb-power-adapter.webp','carregador-hi-turbo-t210a-38a.webp','carregador-lehmox-le182-30w.webp','carregador-lehmox-le91-30w-micro.webp','carregador-mesa-kaidi-6usb-7a.webp','carregador-notebook-my120w.webp','carregador-smart-camera-fullhd.webp','carregador-two-plus-bateria-exibicao.webp','carregador-two-plus-car2010-48a.webp','carregador-two-plus-car2012-7a-3usb.webp','carregador-two-plus-car2015-51a.webp','carregador-two-plus-car2019-qc3.webp','carregador-two-plus-car2021-20w-pd.webp','carregador-two-plus-car2041-34a-micro.webp','carregador-two-plus-car2045-lightning.webp','carregador-usbc-18w.webp','carregador-veicular-kaidi-kd501a-18w.webp','carregador-wireless-hrebos-hs350-3em1.webp','kit-carregador-12w-lightning.webp','kit-carregador-agold-ca17-1-v8.webp','kit-carregador-agold-ca25-3-tipoc.webp','kit-carregador-agold-lightning-ios.webp','leo-eletro-carregador-turbo-usbc-20w.webp','leo-eletro-power-bank-magnetico-agold.webp',
       'fone-agold-fn-a61-tipo-c.webp','fone-agold-fn-a62-lightning.webp','fone-airdots-pro3-bluetooth.webp','fone-onipha-d21-hifi.webp','fone-pro-5s-branco.webp','headphone-a1003-branco-vermelho.webp','headphone-bluetooth-b09.webp','headphone-bluetooth-wireless.webp','headphone-bmax-bm107-led.webp','headphone-bmax-wireless-led.webp','headphone-gamer-bk06.webp','headphone-hrebos-hs187-wireless.webp','headphone-lehmox-leb05-vermelho.webp','headset-gamer-bk50-rgb.webp','headset-gamer-gm002-microfone.webp','headset-gamer-td-lte-as70-rgb.webp','headset-orelha-gato-rgb-ltomex-a096.webp','leo-eletro-fone-airpods-pro.webp','leo-eletro-headphone-p9-pro.webp',
-      'smartwatch-apple-watch-style.webp','smartwatch-blulory-glifo7-pro.webp','smartwatch-caixa-preta.webp',
-      'controle-doubleshock4-ps4.webp','controle-knup-kp4028-ps4.webp','console-videogame-retro-4k.webp',
+      'smartwatch-apple-watch-style.webp','smartwatch-blulory-glifo7-pro.webp','smartwatch-rosa-estilo-apple-watch.webp',
+      'controle-doubleshock4-ps4.webp','controle-knup-kp4028-ps4.webp','controle-sem-fio-xbox-xb-one-24g.webp','console-videogame-retro-4k.webp',
       'suporte-bike-moto-bmax-bmg10.webp','suporte-bike-prova-dagua.webp','suporte-retrovisor-bmax-bmg21.webp','suporte-tv-canaa-parede.webp','suporte-veicular-hrebos-su206.webp','suporte-veicular-kinginfo-sup04.webp','suporte-veicular-lehmox-ley221.webp','suporte-veicular-magnetico-el1907.webp','receptor-bluetooth-veicular-bt350.webp','receptor-bluetooth-veicular-ydt520.webp',
-      'leo-eletro-iphones-vitrine.webp','leo-eletro-iphone-como-novo.webp','leo-eletro-capas-peliculas-vitrine.webp',
+      'leo-eletro-iphones-vitrine.webp','leo-eletro-smartphones-xiaomi-redmi-vitrine.webp','leo-eletro-smartphones-poco-galaxy-moto.webp','leo-eletro-capas-peliculas-vitrine.webp',
       'radio-comunicador-baofeng-bf777s.webp','radio-relogio-ltomex-a2019-amfm.webp','radio-retro-altomex-ad139.webp','garrafa-termica-beer-pints-500ml.webp','garrafa-termica-inox-800ml.webp','garrafa-termica-stay-chill-500ml.webp','copo-termico-stanley-beer-pint.webp','teclado-mouse-mbtech-k4-wireless.webp','kit-teclado-mouse-lehmox-ley176.webp','mini-teclado-lehmox-ley182-rgb.webp','mini-teclado-tomate-mtb107-touchpad.webp','mouse-lehmox-ley28-1200dpi.webp','hub-usb-lehmox-ley02-7portas.webp','hub-usb-lehmox-ley200-4portas.webp','roteador-tplink-tlwr829n-300mbps.webp','case-hd-externo-lehmox-ley33.webp','conversor-digital-inova-dig7020.webp','gravador-voz-knup-kp8004-8gb.webp','interruptor-knup-kp-t85-usb.webp','lanterna-chaveiro-bommax-bma092.webp','luz-traseira-bike-led-usb.webp','mini-tripe-mesa-laser-tech.webp'
     ];
 
     var CATS = [
-      { key: 'smartphones', title: 'Smartphones & iPhones', cover: 'leo-eletro-iphones-vitrine.webp', match: function (f) { return /^leo-eletro-iphone/.test(f) || /iphones-vitrine/.test(f) || /capas-peliculas/.test(f); } },
+      { key: 'smartphones', title: 'Smartphones & iPhones', cover: 'leo-eletro-iphones-vitrine.webp', match: function (f) { return /^leo-eletro-iphone/.test(f) || /iphones-vitrine/.test(f) || /^leo-eletro-smartphones/.test(f) || /capas-peliculas/.test(f); } },
       { key: 'audio', title: 'Fones & Áudio', cover: 'leo-eletro-fone-airpods-pro.webp', match: function (f) { return /^(fone|headphone|headset)-/.test(f) || /^leo-eletro-(fone|headphone)/.test(f); } },
       { key: 'caixas', title: 'Caixas de Som', cover: 'caixa-som-sxqf019-boombox.webp', match: function (f) { return /^(caixa-som|mini-caixa|lampada-caixa)-/.test(f); } },
       { key: 'carregadores', title: 'Carregadores & Power Banks', cover: 'leo-eletro-power-bank-magnetico-agold.webp', match: function (f) { return /^(carregador|kit-carregador)-/.test(f) || /^leo-eletro-(carregador|power-bank)/.test(f); } },
@@ -118,7 +118,13 @@
     CATS = CATS.filter(function (c) { return c.items.length; });
 
     var SPEC = { agold: "A'Gold", v8: 'Micro USB', usbc: 'USB-C', tipoc: 'Tipo C', tipo: 'Tipo', rgb: 'RGB', led: 'LED', ps4: 'PS4', hifi: 'HiFi', fm: 'FM', am: 'AM', amfm: 'AM/FM', hd: 'HD', hdmi: 'HDMI', hdtv: 'HDTV', bt: 'BT', ios: 'iOS', pd: 'PD', qc3: 'QC3', '3em1': '3 em 1', '3usb': '3 USB', '6usb': '6 USB' };
+    /* Nomes personalizados para cards específicos (sobrescreve o nome automático) */
+    var NAMEMAP = {
+      'leo-eletro-smartphones-poco-galaxy-moto.webp': 'Outros Smartphones Vitrine',
+      'smartwatch-rosa-estilo-apple-watch.webp': 'Smartwatch Rosa'
+    };
     function pretty(file) {
+      if (NAMEMAP[file]) return NAMEMAP[file];
       var b = file.replace(/\.webp$/, '').replace(/^leo-eletro-/, '');
       var words = b.split('-').filter(function (w) {
         if (/^\d+(w|mm|m|k|a|v|mah|dpi|portas)$/i.test(w)) return true;
@@ -578,6 +584,19 @@
     video.addEventListener('pause', sync);
     video.addEventListener('ended', sync);
 
+    /* Ao sair da seção: pausa e volta ao início */
+    if (stage && 'IntersectionObserver' in window) {
+      var sectionIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting && stage.contains(video)) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      }, { threshold: 0 });
+      sectionIO.observe(stage);
+    }
+
     /* Som (mute/unmute) */
     if (soundBtn) {
       function syncSound() {
@@ -756,6 +775,26 @@
       });
     }
 
+    sync();
+  })();
+
+  /* ---------- Hero: botão de som ---------- */
+  (function () {
+    var video = $('#hero-video');
+    var btn = $('#hero-sound-btn');
+    if (!video || !btn) return;
+
+    function sync() {
+      var on = !video.muted && video.volume > 0;
+      btn.classList.toggle('is-on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.setAttribute('aria-label', on ? 'Desativar som' : 'Ativar som');
+    }
+    btn.addEventListener('click', function () {
+      video.muted = !video.muted;
+      if (!video.muted && video.volume === 0) video.volume = 1;
+    });
+    video.addEventListener('volumechange', sync);
     sync();
   })();
 

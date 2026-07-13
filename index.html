@@ -355,8 +355,12 @@
         <div class="hero__phone">
           <span class="hero__phone-island" aria-hidden="true"></span>
           <div class="hero__phone-screen">
-            <video src="https://assets.cdn.filesafe.space/7hzaWcGgawCV1WudlwA7/media/6a5255b29c9b37b5fd5f6a27.mp4" autoplay muted loop playsinline preload="metadata"></video>
+            <video id="hero-video" src="https://assets.cdn.filesafe.space/7hzaWcGgawCV1WudlwA7/media/6a5255b29c9b37b5fd5f6a27.mp4" autoplay muted loop playsinline preload="metadata"></video>
             <span class="hero__media-label"><span class="hero__media-dot"></span>Tour pela loja</span>
+            <button class="hero__sound" id="hero-sound-btn" type="button" aria-label="Ativar som" aria-pressed="false">
+              <svg class="hero__sound-ico ic-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><line x1="17" y1="9" x2="22" y2="15"/><line x1="22" y1="9" x2="17" y2="15"/></svg>
+              <svg class="hero__sound-ico ic-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -452,8 +456,8 @@
       </div>
       <div class="ench__media reveal" data-delay="1">
         <figure class="ench__main">
-          <video id="ench-video" src="https://assets.cdn.filesafe.space/7hzaWcGgawCV1WudlwA7/media/6a5255ab0e67afc013a323d2.mp4" autoplay muted loop playsinline preload="metadata" poster="Assets/leo-eletro-aparelho-conserto-bancada.webp"></video>
-          <button class="vplay is-playing" id="ench-video-btn" type="button" aria-label="Pausar vídeo" aria-pressed="true">
+          <video id="ench-video" src="https://assets.cdn.filesafe.space/7hzaWcGgawCV1WudlwA7/media/6a5255ab0e67afc013a323d2.mp4" muted loop playsinline preload="metadata" poster="Assets/leo-eletro-aparelho-conserto-bancada.webp"></video>
+          <button class="vplay is-paused" id="ench-video-btn" type="button" aria-label="Reproduzir vídeo" aria-pressed="false">
             <span class="vplay__ring" aria-hidden="true"></span>
             <svg class="vplay__ico vplay__ico--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.79-6.86a1 1 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14z"/></svg>
             <svg class="vplay__ico vplay__ico--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6.5" y="5" width="4" height="14" rx="1.5"/><rect x="13.5" y="5" width="4" height="14" rx="1.5"/></svg>

@@ -548,6 +548,74 @@ Quatro vídeos curtos, **analisados por extração de frames (ffmpeg)** e renome
 
 ---
 
+## Imagem adicionada posteriormente (Skill executada individualmente)
+
+### Captura de tela 2026-07-13 145341.webp → leo-eletro-smartphones-xiaomi-redmi-vitrine.webp
+
+**Descrição:** Composição fotográfica de oito caixas de smartphones Xiaomi/Redmi lacrados, dispostas lado a lado em duas fileiras e preenchendo todo o quadro. Fileira de cima (esquerda → direita): **Redmi 6** (caixa laranja), **Redmi Note 8** (caixa branca com foto do aparelho na frente), **Redmi Note 7** (caixa branca) e **Redmi Note 8 Pro** (caixa branca com foto do aparelho). Fileira de baixo: **Note 10** (caixa preta), **9** (caixa cinza-claro), **8** (caixa grafite) e **Redmi Note 8 Pro** (caixa rosa/magenta). Todas exibem o logo "Mi" da Xiaomi no canto superior e o número/modelo em tipografia grande. Paleta variada e vibrante (laranja, branco, cinza, preto e rosa) sobre fundo escuro de prateleira, com um filete de luz LED azul ao fundo. Estilo de foto de catálogo/vitrine: luz frontal uniforme, ângulo reto e frontal, atmosfera de loja de varejo com produtos novos e lacrados.
+
+**Contexto de uso atual:** Não identificada no HTML — arquivo recém-adicionado (captura de tela), ainda não referenciado no site.
+
+**Sugestões de uso no site:**
+- 🥇 **Uso principal recomendado:** Vitrine / categoria "Smartphones & iPhones" — reforça visualmente que a loja vende smartphones Android **novos e lacrados** (Xiaomi/Redmi), complementando a linha de iPhones.
+- 🥈 **Uso alternativo 1:** Galeria ou seção "Sobre" — comprova variedade de estoque e produtos originais.
+- 🥉 **Uso alternativo 2:** OG Image / redes sociais em posts sobre venda de smartphones Android.
+- ⚠️ **Evitar usar em:** Hero de fundo — composição cheia e colorida de embalagens que competiria com o título e prejudicaria a legibilidade; e como capa de serviço de conserto, pois mostra produtos novos, não reparo.
+
+**Novo nome sugerido (SEO):** `leo-eletro-smartphones-xiaomi-redmi-vitrine.webp`
+
+**Alt text sugerido:** Vitrine de smartphones Xiaomi Redmi lacrados à venda na Leo Eletro em Bangu — Redmi 6, Note 7, Note 8, Note 8 Pro, Note 9 e Note 10.
+
+### leo-eletro-conserto-venda-bangu (3).webp → controle-sem-fio-xbox-xb-one-24g.webp
+
+**Descrição:** Foto de produto de um controle de videogame sem fio. Ao fundo, duas embalagens verdes e pretas com o texto **"X-B one 2.4G WIRELESS CONTROLLER"** e a ilustração do controle. À frente, em destaque, um **controle preto estilo Xbox** com acentos em verde — analógicos, direcional (D-pad) e botões ABXY coloridos — apoiado sobre uma superfície de madeira. Na parte inferior, um **cabo USB** preto e um **receptor/dongle USB sem fio**. Iluminação frontal uniforme, cores predominantes preto e verde, atmosfera de produto novo à venda.
+
+**Contexto de uso atual:** Não identificada no HTML — arquivo com nome sequencial recém-adicionado, ainda não referenciado no site.
+
+**Sugestões de uso no site:**
+- 🥇 **Uso principal recomendado:** Vitrine / categoria "Games" — controle sem fio compatível, complementa os cards de console/PS4 e reforça a linha gamer da loja.
+- 🥈 **Uso alternativo 1:** Galeria ou OG Image em posts sobre acessórios gamer.
+- 🥉 **Uso alternativo 2:** Card em modal de acessórios diversos.
+- ⚠️ **Evitar usar em:** Hero de fundo (produto isolado, não ambienta a loja) e cards de serviço de conserto (é produto, não reparo).
+
+**Novo nome sugerido (SEO):** `controle-sem-fio-xbox-xb-one-24g.webp`
+
+**Alt text sugerido:** Controle de videogame sem fio X-B One 2.4G estilo Xbox, com receptor USB e cabo, à venda na Leo Eletro em Bangu.
+
+### leo-eletro-conserto-venda-bangu (3).webp [2ª imagem] → leo-eletro-smartphones-poco-galaxy-moto.webp
+
+**Descrição:** Foto de vitrine com **três caixas de smartphones lacrados** lado a lado, em pé, sobre um balcão preto e fundo neutro claro. Da esquerda para a direita: **Xiaomi POCO X3 Pro** (caixa preta com o nome em dourado), **Samsung Galaxy A32** (caixa branca com a foto do aparelho preto na frente e "SAMSUNG" na base) e **Motorola Moto G10** (caixa azul-marinho com o logo circular da Motorola e "moto g10" em verde). Iluminação suave e frontal, cores predominantes preto, branco e azul-marinho, atmosfera de produtos novos e originais à venda.
+
+**Contexto de uso atual:** Não identificada no HTML — arquivo com nome sequencial recém-adicionado, ainda não referenciado no site.
+
+**Sugestões de uso no site:**
+- 🥇 **Uso principal recomendado:** Vitrine / categoria "Smartphones & iPhones" — reforça a variedade de marcas Android novas e lacradas (Xiaomi, Samsung, Motorola), complementando a linha de iPhones.
+- 🥈 **Uso alternativo 1:** Galeria ou seção "Sobre" — comprova estoque diversificado e produtos originais.
+- 🥉 **Uso alternativo 2:** OG Image / redes sociais em posts sobre venda de smartphones Android.
+- ⚠️ **Evitar usar em:** Hero de fundo (composição de embalagens que competiria com o título) e cards de serviço de conserto (mostra produtos novos, não reparo).
+
+**Novo nome sugerido (SEO):** `leo-eletro-smartphones-poco-galaxy-moto.webp`
+
+**Alt text sugerido:** Vitrine de smartphones Android lacrados à venda na Leo Eletro em Bangu — Xiaomi POCO X3 Pro, Samsung Galaxy A32 e Motorola Moto G10.
+
+### leo-eletro-conserto-venda-bangu (4).webp → smartwatch-rosa-estilo-apple-watch.webp
+
+**Descrição:** Foto de produto, tirada no balcão da loja, de um **smartwatch rosa estilo Apple Watch** (caixa de bordas arredondadas, coroa lateral e pulseira de silicone rosa). A tela do relógio exibe a **marca "LEO ELETRO"** com o mascote (avatar de um homem barbudo de camisa branca e braços cruzados). Ao lado, em pé, a **caixa branca do produto** com uma arte de dois relógios (um preto e um rosa) envoltos por um respingo de água estilizado, sugerindo resistência à água. Ao fundo, prateleiras da loja com acessórios (caixas de som, embalagens) e iluminação azul de LED. Superfície preta reflexiva, cores predominantes rosa, branco e preto.
+
+**Contexto de uso atual:** Não identificada no HTML — arquivo com nome sequencial recém-adicionado, ainda não referenciado no site.
+
+**Sugestões de uso no site:**
+- 🥇 **Uso principal recomendado:** Vitrine / categoria "Smartwatches" — mostra um relógio inteligente à venda, com a marca da loja na tela (reforça originalidade e identidade).
+- 🥈 **Uso alternativo 1:** Galeria ou seção "Sobre" — a marca "Leo Eletro" no visor humaniza e valoriza a identidade da loja.
+- 🥉 **Uso alternativo 2:** OG Image / redes sociais em posts sobre smartwatches.
+- ⚠️ **Evitar usar em:** Hero de fundo (produto isolado, foco no relógio) e cards de serviço de conserto (é produto, não reparo).
+
+**Novo nome sugerido (SEO):** `smartwatch-rosa-estilo-apple-watch.webp`
+
+**Alt text sugerido:** Smartwatch rosa estilo Apple Watch com pulseira de silicone, com a marca Leo Eletro na tela, à venda na loja em Bangu.
+
+---
+
 ## Renomeação (executada)
 
 **Todas as 119 fotos** foram renomeadas fisicamente (`mv`) de `leo-eletro-conserto-venda-bangu (N).webp` para o slug SEO correspondente da tabela-resumo. Não há mais arquivos com nome sequencial nem duplicatas. As 2 logos e o favicon já tinham nome otimizado e foram mantidos.
