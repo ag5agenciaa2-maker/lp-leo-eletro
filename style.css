@@ -139,6 +139,7 @@ h1,h2,h3,h4{font-family:var(--font-title);margin:0}
 .drawer__phone{text-align:center;font-family:var(--font-title);font-weight:700;font-size:17px;color:var(--white)}
 .drawer__phone:hover{color:var(--gold)}
 body.drawer-open{overflow:hidden}
+html.no-scroll,body.no-scroll{overflow:hidden}
 
 /* ===== Hero ===== */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}

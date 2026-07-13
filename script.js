@@ -213,12 +213,12 @@
       mGrid.scrollTop = 0;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
-      document.documentElement.style.overflow = 'hidden';
+      document.documentElement.classList.add('no-scroll');
     }
     function closeModal() {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
-      document.documentElement.style.overflow = '';
+      document.documentElement.classList.remove('no-scroll');
     }
 
     grid.addEventListener('click', function (e) {
@@ -739,7 +739,7 @@
         lbStage.insertBefore(video, bar);  // move o vídeo real para o pop-up
         lb.classList.add('open');
         lb.setAttribute('aria-hidden', 'false');
-        document.documentElement.style.overflow = 'hidden';
+        document.documentElement.classList.add('no-scroll');
         var p = video.play();
         if (p && typeof p.catch === 'function') p.catch(function () {});
         closeBtn.focus();
@@ -747,7 +747,7 @@
       function closeLightbox() {
         lb.classList.remove('open');
         lb.setAttribute('aria-hidden', 'true');
-        document.documentElement.style.overflow = '';
+        document.documentElement.classList.remove('no-scroll');
         expandBtn.focus();
         // devolve o vídeo só depois do fade, para o fechamento ficar fluido
         clearTimeout(restoreTimer);
