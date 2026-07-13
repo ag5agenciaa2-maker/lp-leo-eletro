@@ -53,6 +53,9 @@ h1,h2,h3,h4{font-family:var(--font-title);margin:0}
 
 /* ===== Shared section bits ===== */
 .section{padding:var(--sect) var(--pad);max-width:var(--maxw);margin:0 auto}
+/* Separador premium — fio dourado que desvanece */
+.sep{position:relative;width:min(1080px,86%);height:1px;margin:0 auto;background:linear-gradient(90deg,transparent 0%,rgba(245,197,24,.5) 50%,transparent 100%)}
+.sep::before{content:"";position:absolute;left:50%;top:50%;width:min(440px,72%);height:72px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(245,197,24,.09),transparent 72%);pointer-events:none}
 .eyebrow{font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .section__head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:48px}
 .section__title{font-weight:700;font-size:clamp(30px,4.4vw,52px);letter-spacing:-1px}
